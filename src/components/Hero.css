@@ -1,0 +1,165 @@
+#textblock {
+    background-color: #1C050F;
+    height: 100vh;
+  }
+  
+  #textblock-container {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 70px;
+  }
+  
+  #textblock-title {
+    color: #ffaf1b;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: "Helvetica Neue";
+  }
+  
+  #textblock-content {
+    color: #ffaf1b;
+    font-size: 20px;
+  }
+  
+  #textblock-footer {
+    color: #ffaf1b;
+    font-size: 15px;
+    font-weight: 400;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin-bottom: 20px;
+  
+  }
+  
+  #textblock-devsense {
+    text-decoration: none;
+    color: #ffaf1b;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .animation, .animation_layer {
+      height: 1000px;
+  }
+  
+  .animation {
+    display: block;
+      position: relative;
+      z-index: 10;
+  }
+  
+  .animation_layer {
+      background-position: bottom center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      position: absolute;
+  }
+  .animation_layer.parallax {
+      position: fixed;
+  }
+  
+  #btn {
+    width: 400px;
+    height: 100px;
+    background-color: #F7D621;
+    position: absolute;
+    top: 700px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 0px 12px #1C050F;
+    text-align: center;
+    font-size: 50px;
+    color: #1C050F;
+  }
+
+  #btn:hover {
+    width: 400px;
+    height: 100px;
+    background-color: #1C050F;
+    position: absolute;
+    top: 700px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 0px 12px #1C050F;
+    text-align: center;
+    font-size: 50px;
+    color: #F7D621;
+  }
+
+  #bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../public/images/background-1.png);
+  }
+  
+  #first {
+    background-image: url(../../public/images/level-1.png);
+    background-size: cover;
+  }
+  
+  #second {
+    background-image: url(../../public/images/level-2.png);
+  }
+
+  
+  #third {
+    background-image: url(../../public/images/level-3.png);
+  }
+
+  #logo {
+    background-image: url(../../public/images/logo.png);
+    width: 50%;
+    top: 100px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  @media (max-width: 768px)
+{
+    .animation_layer
+   {
+        background-position: bottom center;
+        background-size: auto 1038px;
+        background-repeat: repeat-x;
+        width: 100%;
+        position: absolute;
+   }
+   #bg{
+    background-size: auto 1038px;
+    background-repeat: repeat-x;
+   }
+
+   #logo {
+    width: 90%;
+    background-position: bottom center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+   }
+
+   #btn {
+    width: 70%;
+    height: 80px;
+    background-color: #F7D621;
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 0px 12px #1C050F;
+    text-align: center;
+    font-size: 30px;
+    color: #1C050F;
+  }
+}
