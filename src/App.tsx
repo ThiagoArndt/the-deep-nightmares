@@ -1,5 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import GameInfo from './components/GameInfo'
+import GameInfoContent from './components/GameInfoContent'
 
 function App () {
   return (
@@ -7,7 +9,7 @@ function App () {
       <Navbar />
       <Hero>
         <>
-          <h1 className='text-white'>Olá</h1>
+          <GameInfoContent />
         </>
       </Hero>
     </>
