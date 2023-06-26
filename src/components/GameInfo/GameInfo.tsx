@@ -18,7 +18,7 @@ function GameInfo (props: GameInfoInterface) {
           props.reverse ? 'sm:order-1' : 'sm:order-2'
         }`}
       >
-        <h1 className='text-secondary text-8xl'>Lorem Ipsum</h1>
+        <h1 className='text-secondary text-7xl sm:text-8xl'>Lorem Ipsum</h1>
         <h2 className='text-white text-4xl'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

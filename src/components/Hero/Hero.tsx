@@ -8,7 +8,7 @@ function Hero (props: any) {
   return (
     <div className='App'>
       <Parallax
-        pages={isMobile ? 8 : 4}
+        pages={isMobile ? 10 : 5.3}
         style={{ top: '0', left: '0' }}
         className='animation'
       >
