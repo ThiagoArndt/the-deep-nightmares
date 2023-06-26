@@ -87,25 +87,25 @@
   #bg {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../../public/images/background-1.png);
+    background-image: url(../../../public/images/background-1.png);
   }
   
   #first {
-    background-image: url(../../public/images/level-1.png);
+    background-image: url(../../../public/images/level-1.png);
     background-size: cover;
   }
   
   #second {
-    background-image: url(../../public/images/level-2.png);
+    background-image: url(../../../public/images/level-2.png);
   }
 
   
   #third {
-    background-image: url(../../public/images/level-3.png);
+    background-image: url(../../../public/images/level-3.png);
   }
 
   #logo {
-    background-image: url(../../public/images/logo.png);
+    background-image: url(../../../public/images/logo.png);
     width: 50%;
     top: 100px;
     left: 50%;
@@ -154,3 +154,4 @@
     color: #1C050F;
   }
 }
+

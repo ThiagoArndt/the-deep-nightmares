@@ -1,10 +1,17 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { useMediaQuery } from 'react-responsive'
 import './Hero.css'
 
 function Hero (props: any) {
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` })
+
   return (
     <div className='App'>
-      <Parallax pages={6} style={{ top: '0', left: '0' }} className='animation'>
+      <Parallax
+        pages={isMobile ? 8 : 4}
+        style={{ top: '0', left: '0' }}
+        className='animation'
+      >
         <ParallaxLayer offset={0} speed={0.3}>
           <div className='animation_layer parallax' id='bg'></div>
         </ParallaxLayer>

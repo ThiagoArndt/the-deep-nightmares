@@ -1,6 +1,8 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import GameInfoContent from './components/GameInfoContent'
+import Navbar from './components/Navbar/Navbar'
+
+import GameInfoContent from './components/GameInfo/GameInfoContent'
+import Hero from './components/Hero/Hero'
+import FeaturesContent from './components/Features/FeaturesContent'
 
 function App () {
   return (
@@ -9,6 +11,7 @@ function App () {
       <Hero>
         <>
           <GameInfoContent />
+          <FeaturesContent />
         </>
       </Hero>
     </>
