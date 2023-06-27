@@ -1,14 +1,19 @@
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { useMediaQuery } from 'react-responsive'
+import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import './Hero.css'
+import { useRef } from 'react'
+import { ParallaxConfig, useAdaptiveTriggers } from '../../utils/paralaxUtils'
+
 
 function Hero (props: any) {
-  const isMobile = useMediaQuery({ query: `(max-width: 760px)` })
+  const width = useAdaptiveTriggers({})
+  const parallax = useRef<IParallax>(null!)
 
   return (
     <div className='App'>
       <Parallax
-        pages={isMobile ? 10 : 5.3}
+       ref={parallax} 
+       pages={ParallaxConfig[width].pages}
+       key={width}
         style={{ top: '0', left: '0' }}
         className='animation'
       >
