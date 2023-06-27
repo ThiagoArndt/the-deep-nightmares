@@ -7,21 +7,21 @@ interface GameInfoInterface {
 
 function GameInfo (props: GameInfoInterface) {
   return (
-    <div className='grid grid-cols-1 gap-12 px-[5%] sm:px-20 sm:grid-cols-2'>
+    <div className='grid grid-cols-1 gap-12 px-[5%] md:px-20 md:grid-cols-2'>
       <img
-        className={`order-1 ${props.reverse ? 'sm:order-2' : 'sm:order-1'}`}
+        className={`order-1 ${props.reverse ? 'md:order-2' : 'md:order-1'}`}
         src={`${props.image}`}
         alt=''
       />
       <div
         className={`flex flex-col gap-4 order-2 ${
-          props.reverse ? 'sm:order-1' : 'sm:order-2'
+          props.reverse ? 'md:order-1' : 'md:order-2'
         }`}
       >
-        <h1 className='text-secondary text-7xl sm:text-8xl'>Lorem Ipsum</h1>
+        <h1 className='text-secondary text-7xl md:text-8xl'>Lorem Ipsum</h1>
         <h2 className='text-white text-4xl'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          eiumdod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla

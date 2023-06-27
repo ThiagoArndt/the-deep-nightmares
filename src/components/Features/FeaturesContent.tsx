@@ -8,36 +8,36 @@ function FeaturesContent () {
           <h1 className='text-white text-8xl'>Features</h1>
           <div className='w-full h-[1px] bg-white'></div>
         </div>
-        <div className='grid grid-cols-1 gap-20 text-center sm:grid-cols-[repeat(3,1fr)]'>
+        <div className='grid grid-cols-1 gap-20 text-center md:grid-cols-[repeat(3,1fr)]'>
           <FeatureItem
             image='/images/feature-1.png'
-            title='Lorem Ipsum'
+            title='Morte'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
           />
           <FeatureItem
             image='/images/feature-2.png'
-            title='Lorem Ipsum'
+            title='Misterio'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
           />
           <FeatureItem
             image='/images/feature-3.png'
-            title='Lorem Ipsum'
+            title='Tochas'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
           />
 
           <FeatureItem
-            image='/images/feature-1.png'
-            title='Lorem Ipsum'
+            image='/images/feature-4.png'
+            title='Luz'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
           />
           <FeatureItem
-            image='/images/feature-2.png'
-            title='Lorem Ipsum'
+            image='/images/feature-5.png'
+            title='Criatura'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
           />
           <FeatureItem
-            image='/images/feature-3.png'
-            title='Lorem Ipsum'
+            image='/images/feature-6.png'
+            title='Defesa'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
           />
         </div>
