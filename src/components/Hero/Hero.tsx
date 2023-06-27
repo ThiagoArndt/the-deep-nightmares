@@ -3,7 +3,6 @@ import './Hero.css'
 import { useRef } from 'react'
 import { ParallaxConfig, useAdaptiveTriggers } from '../../utils/paralaxUtils'
 
-
 function Hero (props: any) {
   const width = useAdaptiveTriggers({})
   const parallax = useRef<IParallax>(null!)
@@ -11,9 +10,9 @@ function Hero (props: any) {
   return (
     <div className='App'>
       <Parallax
-       ref={parallax} 
-       pages={ParallaxConfig[width].pages}
-       key={width}
+        ref={parallax}
+        pages={ParallaxConfig[width].pages}
+        key={width}
         style={{ top: '0', left: '0' }}
         className='animation'
       >

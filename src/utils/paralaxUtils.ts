@@ -4,8 +4,8 @@ export enum Adaptive {
   xs = 'xs',
   s = 's',
   m = 'm',
-  // l = 'l',
-  // xl = 'xl'
+  l = 'l',
+   xl = 'xl'
 }
 
 interface UseAdaptiveTriggersProps {
@@ -26,24 +26,24 @@ export const useAdaptiveTriggers = ({
   const [width, setWidth] = useState<Adaptive>(Adaptive.xs)
   useLayoutEffect(() => {
     const handleResize = () => {
-      if (window?.innerWidth < 800) {
+      if (window?.innerWidth < 640) {
         onExtraSmallEnter?.()
         return setWidth(Adaptive.xs)
       }
-      if (window?.innerWidth < 1200) {
+      if (window?.innerWidth < 768) {
         onSmallEnter?.()
         return setWidth(Adaptive.s)
       }
-      else {
+      if (window?.innerWidth < 1024) {
         onMediumEnter?.()
         return setWidth(Adaptive.m)
       }
-      // if (window?.innerWidth < 1440) {
-      //   onLargeEnter?.()
-      //   return setWidth(Adaptive.l)
-      // }
-      // onExtraLargeEnter?.()
-      // return setWidth(Adaptive.xl)
+      if (window?.innerWidth < 1280) {
+        onLargeEnter?.()
+        return setWidth(Adaptive.l)
+      }
+      onExtraLargeEnter?.()
+      return setWidth(Adaptive.xl)
     }
     window.addEventListener('resize', handleResize)
     handleResize()
@@ -72,12 +72,18 @@ export const ParallaxConfig: Record<
   Adaptive,Record<any, number> & LayoutConfig
 > = {
   [Adaptive.xs]: {
-    pages: 2,
+    pages: 10,
   },
   [Adaptive.s]: {
-    pages: 5.2,
+    pages: 9,
   },
   [Adaptive.m]: {
-    pages: 9,
+    pages: 8,
+  },
+  [Adaptive.l]: {
+    pages: 7,
+  },
+  [Adaptive.xl]: {
+    pages: 6.5,
   },
 }

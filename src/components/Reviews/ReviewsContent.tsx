@@ -9,7 +9,7 @@ function ReviewsContent () {
           <h1 className='text-white text-8xl'>Reviews</h1>
           <div className='w-full h-[1px] bg-white'></div>
         </div>
-        <div className='flex flex-col gap-28 justify-between sm:px-20 sm:flex-row'>
+        <div className='flex flex-col gap-8 justify-between 2xl:px-20 xl:flex-row 2xl:gap-24'>
           <ReviewItem />
           <ReviewItem />
           <ReviewItem />
