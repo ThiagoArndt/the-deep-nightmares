@@ -72,18 +72,18 @@ export const ParallaxConfig: Record<
   Adaptive,Record<any, number> & LayoutConfig
 > = {
   [Adaptive.xs]: {
-    pages: 10,
+    pages: 12,
   },
   [Adaptive.s]: {
-    pages: 9,
+    pages: 11,
   },
   [Adaptive.m]: {
-    pages: 8,
+    pages: 9,
   },
   [Adaptive.l]: {
-    pages: 7,
+    pages: 7.5,
   },
   [Adaptive.xl]: {
-    pages: 6.5,
+    pages: 6.3,
   },
 }
