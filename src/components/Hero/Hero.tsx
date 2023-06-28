@@ -2,8 +2,33 @@ import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import './Hero.css'
 import { useRef } from 'react'
 import { ParallaxConfig, useAdaptiveTriggers } from '../../utils/paralaxUtils'
-
+import { getStorage, ref, getDownloadURL } from 'firebase/storage'
 function Hero (props: any) {
+  function downloadFile (url: string) {
+    const fileName = url.split('/').pop()
+    const aTag = document.createElement('a')
+    aTag.href = url
+    aTag.setAttribute('download', fileName!)
+    document.body.appendChild(aTag)
+    aTag.click()
+    aTag.remove()
+  }
+
+  const storage = getStorage()
+  const donwloadUrl = () =>
+    getDownloadURL(
+      ref(
+        storage,
+        'gs://the-deep-nightmare.appspot.com/The Deep Nightmares 1.0.zip'
+      )
+    )
+      .then(url => {
+        downloadFile(url)
+      })
+      .catch(error => {
+        window.location.replace('https://www.omfgdogs.com/#')
+      })
+
   const width = useAdaptiveTriggers({})
   const parallax = useRef<IParallax>(null!)
 
@@ -16,7 +41,7 @@ function Hero (props: any) {
         style={{ top: '0', left: '0' }}
         className='animation'
       >
-        <ParallaxLayer offset={0} speed={0.3}>
+        <ParallaxLayer id='home' offset={0} speed={0.3}>
           <div className='animation_layer parallax' id='bg'></div>
         </ParallaxLayer>
         <ParallaxLayer offset={0} speed={0.15}>
@@ -32,7 +57,9 @@ function Hero (props: any) {
           <div className='animation_layer parallax' id='logo'></div>
         </ParallaxLayer>
         <ParallaxLayer offset={0} speed={0.1}>
-          <button id='btn'>Jogue Agora!</button>
+          <button onClick={donwloadUrl} id='btn'>
+            Jogue Agora!
+          </button>
         </ParallaxLayer>
         <ParallaxLayer offset={1} speed={0.25}>
           {props.children}

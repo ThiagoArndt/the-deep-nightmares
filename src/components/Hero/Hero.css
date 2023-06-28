@@ -163,7 +163,7 @@
 {
   #logo {
     width: 50%;
-    top: 100px;
+    top: 0px;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%)
@@ -175,7 +175,7 @@
 #btn {
   width: 400px;
   height: 100px;
-  top: 700px;
+  top: 600px;
   left: 50%;
 
 }

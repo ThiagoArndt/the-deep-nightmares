@@ -3,11 +3,16 @@ import React from 'react'
 interface GameInfoInterface {
   reverse: boolean
   image: string
+  title: string
+  description: string
 }
 
 function GameInfo (props: GameInfoInterface) {
   return (
-    <div className='grid grid-cols-1 gap-12 px-[5%] md:px-20 md:grid-cols-2'>
+    <div
+      id='info'
+      className='grid grid-cols-1 gap-12 px-[5%] md:px-20 md:grid-cols-2'
+    >
       <img
         className={`order-1 ${props.reverse ? 'md:order-2' : 'md:order-1'}`}
         src={`${props.image}`}
@@ -18,15 +23,8 @@ function GameInfo (props: GameInfoInterface) {
           props.reverse ? 'md:order-1' : 'md:order-2'
         }`}
       >
-        <h1 className='text-secondary text-7xl md:text-8xl'>Lorem Ipsum</h1>
-        <h2 className='text-white text-4xl'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiumdod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident.
-        </h2>
+        <h1 className='text-secondary text-7xl md:text-8xl'>{props.title}</h1>
+        <h2 className='text-white text-4xl'>{props.description}</h2>
       </div>
     </div>
   )
