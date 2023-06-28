@@ -29,7 +29,7 @@ var obj = [
     image: '/images/feature-5.png',
     title: 'Criatura',
     description:
-      'Você conseguirá ouvir a criatura quando ela estiver pelos arredores.'
+      'Voce conseguirá ouvir a criatura quando ela estiver pelos arredores.'
   },
   {
     image: '/images/feature-6.png',
