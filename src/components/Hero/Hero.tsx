@@ -19,7 +19,7 @@ function Hero (props: any) {
     getDownloadURL(
       ref(
         storage,
-        'gs://the-deep-nightmare.appspot.com/The Deep Nightmare 1.1.zip'
+        'gs://the-deep-nightmare.appspot.com/The Deep Nightmare 1.2.zip'
       )
     )
       .then(url => {
